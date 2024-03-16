@@ -1,0 +1,32 @@
+<script>
+    // Função para redirecionar com base na localização do usuário
+    function redirecionarPorLocalizacao() {
+      // Verifica se o navegador suporta a geolocalização
+      if (navigator.geolocation) {
+          // Obtém a posição do usuário
+          navigator.geolocation.getCurrentPosition(function(position) {
+              // Obtém as coordenadas de latitude e longitude
+              var latitude = position.coords.latitude;
+              var longitude = position.coords.longitude;
+
+              // Verifica se as coordenadas estão dentro da América do Norte
+              if (latitude > 25 && latitude < 60 && longitude > -170 && longitude < -50) {
+                  // Redireciona para a versão em inglês
+                  window.location.href = '/en';
+              } else if (latitude > -35 && latitude < 5 && longitude > -75 && longitude < -35) {
+                  // Redireciona para a versão em português (Brasil)
+                  window.location.href = '/pt';
+              } else {
+                  // Redireciona para a versão em inglês para qualquer outro lugar do mundo
+                  window.location.href = '/en';
+              }
+          });
+      } else {
+          // Navegador não suporta geolocalização, redireciona para a versão em inglês por padrão
+          window.location.href = '/en';
+      }
+  }
+
+  // Chama a função para redirecionar
+  redirecionarPorLocalizacao();
+</script> 
