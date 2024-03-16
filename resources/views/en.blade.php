@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <title>Incept Desing</title>
-    <link rel="shortcut icon" type="imagex/png" href="/incept/img/logo-icon.ico">
+    <link rel="shortcut icon" type="imagex/png" href="/public/incept/img/logo-icon.ico">
   </head>
 
   <body>
